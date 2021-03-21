@@ -180,7 +180,7 @@ test('?raw import', async () => {
 })
 
 test('?url import', async () => {
-  const src = `console.log('hi')\n`
+  const src = `console.log('hi')`
   expect(await page.textContent('.url')).toMatch(
     isBuild
       ? `data:application/javascript;base64,${Buffer.from(src).toString(
